@@ -5,10 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Project Title | Conference 2026</title>
 
-  <script type="module"
-    src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
-  </script>
-
   <style>
     :root {
       --bg: #ffffff;
@@ -163,12 +159,13 @@
       padding: 16px;
     }
 
-    model-viewer {
+    .viewer-frame {
       width: 100%;
       height: 640px;
+      border: 0;
+      border-radius: 14px;
       background:
         radial-gradient(circle at top, #fdfdfd 0%, #f4f5f7 65%, #eceef2 100%);
-      border-radius: 14px;
     }
 
     .viewer-caption {
@@ -261,7 +258,7 @@
         grid-template-columns: 1fr;
       }
 
-      model-viewer {
+      .viewer-frame {
         height: 480px;
       }
 
@@ -275,7 +272,7 @@
         padding-top: 38px;
       }
 
-      model-viewer {
+      .viewer-frame {
         height: 380px;
       }
 
@@ -326,17 +323,13 @@
         <h2>Interactive 3D Result</h2>
 
         <div class="viewer-card">
-          <model-viewer
-            src="./model.glb"
-            alt="3D result"
-            camera-controls
-            auto-rotate
-            shadow-intensity="1"
-            exposure="1"
-            environment-image="neutral"
-            interaction-prompt="auto"
-            loading="eager">
-          </model-viewer>
+          <iframe
+            id="supersplat-viewer"
+            class="viewer-frame"
+            src="https://superspl.at/s?id=4bb88854"
+            allow="fullscreen; xr-spatial-tracking"
+            allowfullscreen>
+          </iframe>
 
           <div class="viewer-caption">
             Drag to rotate, scroll to zoom, and inspect the 3D result interactively.
@@ -351,7 +344,7 @@
         <p class="lead">
           We present a simple and effective framework for interactive 3D visualization
           and academic result presentation. Our method enables clean demonstration of
-          qualitative results through a web-friendly GLB viewer while preserving the
+          qualitative results through a web-friendly embedded viewer while preserving the
           minimal and professional design commonly used in top-tier conference project pages.
         </p>
         <p>
