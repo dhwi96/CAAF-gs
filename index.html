@@ -170,9 +170,77 @@
 
     .viewer-caption {
       margin-top: 12px;
-      font-size: 0.95rem;
+      font-size: 0.88rem;
       color: var(--muted);
       text-align: center;
+      font-style: italic;
+      line-height: 1.5;
+    }
+
+    .viewer-caption strong {
+      font-style: normal;
+      color: var(--text);
+    }
+
+    .input-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      color: var(--muted);
+      margin: 14px 0 8px;
+    }
+
+    .input-label span {
+      font-weight: 400;
+      text-transform: none;
+      letter-spacing: 0;
+      font-style: italic;
+    }
+
+    .input-label .label-sub {
+      font-weight: 400;
+      text-transform: none;
+      letter-spacing: 0;
+      font-style: italic;
+    }
+
+    .input-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .input-grid img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: var(--soft);
+      display: block;
+    }
+
+    .input-grid .img-placeholder {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      border-radius: 8px;
+      border: 1px dashed #c8ccd3;
+      background: #fafafa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.78rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: var(--line);
+      margin: 14px 0;
     }
 
     .grid-2 {
@@ -318,8 +386,16 @@
 
   <main>
   <div class="viewer-card">
+    <p class="input-label">Multiview Input <span>(4 representative views sampled from the input sequence)</span></p>
+    <div class="input-grid">
+      <img src="assets/lab/input1.JPG" alt="Lab View 1" />
+      <img src="assets/lab/input2.JPG" alt="Lab View 2" />
+      <img src="assets/lab/input3.JPG" alt="Lab View 3" />
+      <img src="assets/lab/input4.JPG" alt="Lab View 4" />
+    </div>
+    <div class="divider"></div>
+    <p class="input-label">GS Output </p>
     <iframe
-      id="supersplat-viewer"
       src="https://superspl.at/s?id=61c295d7"
       width="100%"
       height="480"
@@ -327,11 +403,20 @@
       allow="fullscreen; xr-spatial-tracking"
       allowfullscreen>
     </iframe>
+    <p class="viewer-caption"><strong>Fig. 1.</strong> Qualitative results on the <em>lab</em> scene from the Free Dataset.</p>
   </div>
 
   <div class="viewer-card">
+    <p class="input-label">Multiview Input <span class="label-sub">(4 representative views sampled from the input sequence)</span></p>
+    <div class="input-grid">
+      <img src="assets/road/input1.JPG" alt="Road View 1" />
+      <img src="assets/road/input2.JPG" alt="Road View 2" />
+      <img src="assets/road/input3.JPG" alt="Road View 3" />
+      <img src="assets/road/input4.JPG" alt="Road View 4" />
+    </div>
+    <div class="divider"></div>
+    <p class="input-label">GS Output </p>
     <iframe
-      id="supersplat-viewer"
       src="https://superspl.at/s?id=8636d40f"
       width="100%"
       height="480"
@@ -339,11 +424,20 @@
       allow="fullscreen; xr-spatial-tracking"
       allowfullscreen>
     </iframe>
+    <p class="viewer-caption"><strong>Fig. 2.</strong> Qualitative results on the <em>road</em> scene from the Free Dataset.</p>
   </div>
 
   <div class="viewer-card">
+    <p class="input-label">Multiview Input <span>(4 representative views sampled from the input sequence)</span></p>
+    <div class="input-grid">
+      <img src="assets/hydrant/input1.JPG" alt="Hydrant View 1" />
+      <img src="assets/hydrant/input2.JPG" alt="Hydrant View 2" />
+      <img src="assets/hydrant/input3.JPG" alt="Hydrant View 3" />
+      <img src="assets/hydrant/input4.JPG" alt="Hydrant View 4" />
+    </div>
+    <div class="divider"></div>
+    <p class="input-label">GS Output</p>
     <iframe
-      id="supersplat-viewer"
       src="https://superspl.at/s?id=5430a565"
       width="100%"
       height="480"
@@ -351,10 +445,19 @@
       allow="fullscreen; xr-spatial-tracking"
       allowfullscreen>
     </iframe>
+    <p class="viewer-caption"><strong>Fig. 3.</strong> Qualitative results on the <em>hydrant</em> scene from the Free Dataset.</p>
   </div>
   <div class="viewer-card">
+    <p class="input-label">Multiview Input <span>(4 representative views sampled from the input sequence)</span></p>
+    <div class="input-grid">
+      <img src="assets/grass/input1.JPG" alt="Grass View 1" />
+      <img src="assets/grass/input2.JPG" alt="Grass View 2" />
+      <img src="assets/grass/input3.JPG" alt="Grass View 3" />
+      <img src="assets/grass/input4.JPG" alt="Grass View 4" />
+    </div>
+    <div class="divider"></div>
+    <p class="input-label">GS Output </p>
     <iframe
-      id="supersplat-viewer"
       src="https://superspl.at/s?id=62964401"
       width="100%"
       height="480"
@@ -362,6 +465,7 @@
       allow="fullscreen; xr-spatial-tracking"
       allowfullscreen>
     </iframe>
+    <p class="viewer-caption"><strong>Fig. 4.</strong> Qualitative results on the <em>grass</em> scene from the Free Dataset.</p>
   </div>  
     
   </main>
